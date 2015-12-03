@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Where the streets have no names</title>
+    <title>Create some school polygons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -12,20 +12,20 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['named or not', 'kilometers'],
-          ['Unnamed Kilometers', 15824],
-          ['Named Kilometers',  10406]
+          ['Polygon or Not', 'p_schools'],
+          ['Schools without Polygons', 2037],
+          ['Schools with Polygons',  529]
         ]);
 
         var options = {
-          title: 'Mexico City, RESIDENTIAL Roads Without Names',
+          title: 'Atlanta, School Polygons',
           colors: ['aqua', 'grey']
         };
         
         var formatter1 = new google.visualization.NumberFormat({pattern:'###,###'});
         formatter1.format(data, 1);
         
-        var chart = new google.visualization.PieChart(document.getElementById('road_names_piechart'));
+        var chart = new google.visualization.PieChart(document.getElementById('schools_piechart'));
 
         chart.draw(data, options);
       }
@@ -33,6 +33,6 @@
     
   </head>
   <body>
-	<div id="road_names_piechart" style="width: 570px; height: 300px;"></div>
+	<div id="schools_piechart" style="width: 570px; height: 300px;"></div>
   </body>
 </html>
