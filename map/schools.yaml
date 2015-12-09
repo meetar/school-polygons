@@ -4,7 +4,7 @@
 cameras:
     camera1:
         type: perspective
-        position: [-84.389715, 33.744870, 15] # lon/lat for Atlanta at zoom 15
+        position: [-84.373573, 33.729416, 15] # lon/lat for Atlanta at zoom 15
 
 labels-global:
     - &text_visible_continent         true
