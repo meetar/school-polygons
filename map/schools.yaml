@@ -718,7 +718,7 @@ layers:
                     visible: true
                     priority: 1
                 text:
-                    offset: [[13,6px],[16,8px],[19,10px]]
+                    offset: [[13, [0, 6px]], [16, [0, 8px]], [18, [0, 10px]]] # offset tracks alongside icon size (half icon height)
                     priority: 2
                     anchor: bottom
                     font:
@@ -737,7 +737,7 @@ layers:
         draw:
             polygons:
                 color: '#d7cbbb'
-                order: function() { if( $zoom < 17) { return 10; } else { return 8; } }
+                order: 215
     school-buildings-good:
         data: { source: osm, layer: [buildings] }
         filter:
@@ -746,11 +746,11 @@ layers:
         draw:
             polygons:
                 color: '#bfaf9a'
-                order: function() { if( $zoom < 17) { return 14; } else { return 12; } }
+                order: 500
                 #extrude: function() { return feature.height || 20; }
             outline:
                 style: lines
-                order: 10
+                order: 501
                 color: '#df9c34'
                 width: [[14,0.1px],[15,0.5px],[17,0.5px],[18,0.75px],[19,0.25m]]
                 #extrude: function() { return feature.height || 20; }
@@ -764,11 +764,11 @@ layers:
         draw:
             polygons:
                 color: '#ddb47a'
-                order: function() { if( $zoom < 17) { return 14; } else { return 12; } }
+                order: 502
                 #extrude: function() { return feature.height || 20; }
             outline:
                 style: lines
-                order: 10
+                order: 503
                 color: '#df9c34'
                 width: [[14,0.1px],[15,0.5px],[16,1.25px],[17,2.0px],[18,2.5px],[19,2m]]
                 #extrude: function() { return feature.height || 20; }
