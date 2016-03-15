@@ -121,7 +121,6 @@ map = (function () {
         });
 
         map.getContainer().addEventListener('mousedown', function (event) {
-            info.style.visibility = 'hidden';
             popup.style.visibility = 'hidden';
         });
     }
